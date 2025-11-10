@@ -1,36 +1,27 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import { toast } from "sonner";
+import { Hero } from "@/components/sections/hero";
+import { HowItWorks } from "@/components/sections/how-it-works";
+import { Pricing } from "@/components/sections/pricing";
+import { Specialisations } from "@/components/sections/specialisations";
+import { Team } from "@/components/sections/team";
+import { Safety } from "@/components/sections/safety";
+import { Testimonials } from "@/components/sections/testimonials";
+import { ForCounsellorsCta } from "@/components/sections/for-counsellors";
+import { Faq } from "@/components/sections/faq";
+import { FinalCta } from "@/components/sections/final-cta";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-2xl p-6">
-      <motion.div
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35 }}
-      >
-        <Card className="rounded-2xl shadow">
-          <CardHeader>
-            <CardTitle className="text-2xl">Next + shadcn + Motion</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-sm text-muted-foreground">
-              You’re good to go. Try the button to see a toast and a subtle
-              animation.
-            </p>
-            <Button
-              onClick={() => toast.success("Hello from Sonner!")}
-              className="rounded-2xl"
-            >
-              Show toast
-            </Button>
-          </CardContent>
-        </Card>
-      </motion.div>
-    </main>
+    <>
+      <Hero />
+      <HowItWorks />
+      <Pricing />
+      <Specialisations />
+      <Team />
+      <Safety />
+      <Testimonials />
+      <ForCounsellorsCta />
+      <Faq />
+      <FinalCta />
+    </>
   );
 }
